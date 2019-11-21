@@ -6,7 +6,7 @@ body{
     background-color: rgb(233, 233, 233);
 }
 .navbarhead {
-    display:flex;
+    display: flex;
     margin-left: 0;
     top: 0;
     background-color: rgb(233, 233, 233);
@@ -23,7 +23,7 @@ body{
     padding-right: 1.5em;
 }
 .navbarhead li {
-    padding-right: 2vw;;
+    padding-right: 4vw;;
 }
 .logo{
     padding: 0.5em;
@@ -40,25 +40,30 @@ main {
 .mainpic {
     box-sizing: border-box;
     background-image: url("https://via.placeholder.com/150");
-    min-height: 50vh;
     width: 100%;
+    height: 50vmax;
     flex-direction: column;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .center {
-    max-width: 42%;
-    min-width: 42%;
+    max-width: 33.33%;
+    min-width: 33.33%;
     align-self: center;
     text-align: center;
     font-weight: bold;
 }
 h1 {
-    font-size: 4vw;
+    font-size: 3vw;
     margin: 0;
 }
 .fulline {
+    flex-basis: 100%;
+    text-align: center;
+    padding-right: 4vw;
+}
+.fulline2 {
     flex-basis: 100%;
     text-align: center;
 }
@@ -74,7 +79,7 @@ h2{
     box-sizing: border-box;
     display:flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     padding-top: 4vh;
 }
@@ -83,14 +88,20 @@ h2{
     flex-basis: 30%;
     max-width: 50%;
     padding-bottom: 4vh;
+    flex-grow: 1;
+}
+div.half { 
+    padding: 2vw;
 }
 h3 {
     font-size: 2.5vw;
     text-align: center;
     font-weight: bold;
+    margin-bottom: 0;
 }
 p {
     text-align: center;
+    padding: 0 4vw;
 }
 .flow {
     display:flex;
@@ -110,11 +121,11 @@ footer {
 .navbarfoot {
     display:flex;
     background-color: rgb(212, 209, 209);
-    width: 100%;
+    min-width: 100%;
     justify-content: center;
     flex-wrap: wrap;
     padding-bottom: 3vh;
-    
+    min-height: 248px ;
 }
 .navbarfoot ul {
     list-style: none;
@@ -144,9 +155,8 @@ button {
     background-color: rgb(199, 198, 198);
 }
 .share img {
-    width: 660px;
-    height: 400px;
     object-fit: cover;
+    padding: 2vw;
 }
 .flow img {
     width: 200px;
