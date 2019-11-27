@@ -89,6 +89,7 @@ h2{
     max-width: 50%;
     padding-bottom: 4vh;
     flex-grow: 1;
+    min-height: 30em;
 }
 div.half { 
     padding: 2vw;
@@ -161,8 +162,8 @@ button {
     padding: 2vw;
 }
 .flow img {
-    width: 200px;
-    height: 200px;
+    width: 165px;
+    height: 165px;
 }
 .response {
     max-width: 100%;
@@ -178,6 +179,7 @@ button {
     grid-gap: 2em;
     /* background: papayawhip; */
     padding: 5% 10% 5% 10%;
+    min-height: 25em;
 
 }
 .gridpic {
@@ -272,7 +274,7 @@ h4 {
     display: grid;
     padding: 10% 5%;
     grid-gap: 2em;
-    height: 70vh;
+    height: 40em;
     grid-template-areas: 
     "f g overlap-text h i"
     "f k overlap-text l i"
