@@ -127,7 +127,7 @@ footer {
     align-items: center;
     flex-wrap: wrap;
     padding-bottom: 3vh;
-    min-height: 248px ;
+    min-height: 248px;
 }
 .navbarfoot ul {
     list-style: none;
@@ -262,7 +262,6 @@ h4 {
     grid-area: second-text;
     box-sizing: border-box;
     text-align: start;
-    /* align-self: start; */
     padding: 0 9vw 0 1vw;;
 }
 .first-text p,
@@ -274,12 +273,13 @@ h4 {
     display: grid;
     padding: 10% 5%;
     grid-gap: 2em;
-    height: 40em;
     grid-template-areas: 
     "f g overlap-text h i"
     "f k overlap-text l i"
     "j k overlap-text l m";
     grid-template-columns: 1fr 1fr 30% 1fr 1fr;
+    /* grid-template-rows: repeat(3, minmax(10em, 1fr)); */
+    
 }
 .f {
     grid-area: f;
