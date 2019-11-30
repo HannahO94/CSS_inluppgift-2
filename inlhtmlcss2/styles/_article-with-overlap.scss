@@ -1,0 +1,50 @@
+.article-with-overlap {
+    display: grid;
+    padding: 10% 5%;
+    grid-gap: 2em;
+    grid-template-areas: 
+    "f g overlap-text h i"
+    "f k overlap-text l i"
+    "j k overlap-text l m";
+    grid-template-columns: 1fr 1fr 30% 1fr 1fr;
+    /* grid-template-rows: repeat(3, minmax(10em, 1fr)); */
+    
+} 
+.f {
+    grid-area: f;
+}
+.g {
+    grid-area: g;
+}
+.h {
+    grid-area: h;
+}
+.i {
+    grid-area: i;
+}
+.overlap-text {
+    grid-area: overlap-text;
+    align-self: center;
+    z-index: 1;
+    background: white;
+    padding: 3em 6em;
+    margin: 3em -6em;
+}
+.j {
+    grid-area: j;
+}
+.k {
+    grid-area: k;
+}
+.l {
+    grid-area: l;
+}
+.m {
+    grid-area: m;
+}
+.overlap-text h4,
+.overlap-text p {
+    box-sizing: border-box;
+    text-align: start;
+    padding: 0;
+}
