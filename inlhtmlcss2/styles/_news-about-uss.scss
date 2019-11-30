@@ -1,0 +1,51 @@
+.newsAboutUs {
+    display: grid;
+    grid-template-areas: 
+    "picture inner-container"
+    "picture inner-container";
+    grid-template-columns: 45% 1fr;
+    grid-auto-rows: auto;
+    grid-gap: 7em;
+    background: white;
+    padding: 0;
+    justify-items: start;
+    align-items: start;
+    align-content: start;
+}
+.inner-container-news {
+    grid-area: inner-container;
+    display: grid;
+    height: 100%;
+    grid-template-areas: 
+    "first-text"
+    "second-text";
+    grid-template-rows: 45% 55%;
+    grid-gap: 2em;
+    padding: 5% 12% 5% 0;
+}
+.newsPic {
+    grid-area: picture;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.first-news-text {
+    grid-area: first-text;
+    box-sizing: border-box;
+    text-align: start;
+    align-self: end;
+    padding: 0 9vw 0 1vw;;
+
+}
+.second-news-text {
+    grid-area: second-text;
+    box-sizing: border-box;
+    text-align: start;
+    padding: 0 9vw 0 1vw;;
+}
+.first-news-text p,
+.second-news-text p {
+    text-align: start;
+    padding: 0;
+}

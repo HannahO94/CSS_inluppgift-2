@@ -1,0 +1,39 @@
+.article-collage {
+    display: grid;
+    grid-template-areas: 
+    "text picture picture picture"
+    "text picture picture picture";
+    grid-template-columns: 50% 1fr 1fr 1fr;
+    grid-auto-rows: auto;
+    grid-gap: 2em;
+    padding: 5% 10% 5% 10%;
+    min-height: 25em;
+}
+.collage-text {
+    grid-area: text;
+    box-sizing: border-box;
+    text-align: start;
+    align-self: center;
+    padding: 0 9vw 0 1vw;;
+}
+.collage-text p,
+.collage-text h4 {
+    text-align: start;
+    padding: 0;
+}
+.collage-img1 {
+    grid-row: 1;
+    grid-column: 2;
+}
+.collage-img2 {
+    grid-row: 1;
+    grid-column: 3;
+}
+.collage-img3 {
+    grid-row: 1 / 3;
+    grid-column: 4 / 4;
+}   
+.collage-img4 {
+    grid-row: 2 / 3;
+    grid-column: 2 / 4;
+}
