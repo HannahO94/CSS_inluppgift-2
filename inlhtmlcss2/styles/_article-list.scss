@@ -29,11 +29,36 @@ div.half {
     object-fit: cover;
     padding: 2vw;
 }
+// .picture {
+//     position: absolute;
+//     width: 100%;
+//     height: 100%;
+// }
+// .picturewrapper {
+//     position: relative;
+// }
+
 @media (max-width: 1000px) {
     .half {
         box-sizing: border-box;
-        flex-basis: 70%;
-        max-width: 70%;
-        margin: 5%;
+        flex-basis: 80%;
+        max-width: 80%;
+        margin: 0;
+        min-height: auto;
+        p {
+            padding: 0;
+        }
     }
+    h2 {
+        font-size: 2.3em;
+        margin-bottom: 0;
+    }
+    h3 {
+        font-size: 2em;
+        margin-top: 0;
+    }
+    img.half {
+        margin-bottom: 1em;;
+    }
+    
 }

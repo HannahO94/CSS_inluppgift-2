@@ -5,21 +5,32 @@
 .flow {
     display:flex;
     flex-wrap: wrap;
-    padding: 5% 10% 5% 10%;
+    padding: 5% 0;
     justify-content: center;
     background-color:white;
-
+    @media (min-width: 1000px){
+        .flow{ 
+            padding: 5% 10% 5% 10%;
+        }
+        }
+    img {
+        width: 99px;
+        height: 101px;
+        @media (min-width: 800px) {
+            width: 130px;
+            height: 130px;
+        }
+        @media (min-width: 1000px) {
+            width: 165px;
+            height: 165px;
+        }
+        }
 }
 .picflow {
-    margin: 1vw;
-}
-.flow img {
-    width: 165px;
-    height: 165px;
-}
-@media (max-width: 1000px){
-.picflow {
-    flex-basis: 30%;
-    margin: 15px;
+    margin: 10px;
+    @media (min-width: 1000px){
+        .picflow {
+            margin: 1vw;
+        }
 }
 }

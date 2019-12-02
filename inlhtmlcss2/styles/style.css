@@ -286,10 +286,25 @@ div.half {
   .half {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    -ms-flex-preferred-size: 70%;
-        flex-basis: 70%;
-    max-width: 70%;
-    margin: 5%;
+    -ms-flex-preferred-size: 80%;
+        flex-basis: 80%;
+    max-width: 80%;
+    margin: 0;
+    min-height: auto;
+  }
+  .half p {
+    padding: 0;
+  }
+  h2 {
+    font-size: 2.3em;
+    margin-bottom: 0;
+  }
+  h3 {
+    font-size: 2em;
+    margin-top: 0;
+  }
+  img.half {
+    margin-bottom: 1em;
   }
 }
 
@@ -305,27 +320,45 @@ div.half {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: 5% 10% 5% 10%;
+  padding: 5% 0;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   background-color: white;
 }
 
-.picflow {
-  margin: 1vw;
+@media (min-width: 1000px) {
+  .flow .flow {
+    padding: 5% 10% 5% 10%;
+  }
 }
 
 .flow img {
-  width: 165px;
-  height: 165px;
+  width: 99px;
+  height: 101px;
 }
 
-@media (max-width: 1000px) {
-  .picflow {
-    -ms-flex-preferred-size: 30%;
-        flex-basis: 30%;
-    margin: 15px;
+@media (min-width: 800px) {
+  .flow img {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .flow img {
+    width: 165px;
+    height: 165px;
+  }
+}
+
+.picflow {
+  margin: 10px;
+}
+
+@media (min-width: 1000px) {
+  .picflow .picflow {
+    margin: 1vw;
   }
 }
 
