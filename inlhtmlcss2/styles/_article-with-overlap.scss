@@ -1,17 +1,42 @@
 .article-with-overlap {
     display: grid;
-    padding: 10% 5%;
+    padding: 20% 0 10% 0;
     grid-gap: 2em;
+    margin: 5%;
     grid-template-areas: 
-    "f g overlap-text h i"
-    "f k overlap-text l i"
-    "j k overlap-text l m";
-    grid-template-columns: 1fr 1fr 30% 1fr 1fr;
-    /* grid-template-rows: repeat(3, minmax(10em, 1fr)); */
-    @media (max-width: 1000px){
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    "g h"
+    "overlap-text overlap-text"
+    "j m";
+    grid-template-columns: 45% 45%;
+    grid-template-rows: 200px 150px 200px;
+    @media (min-width: 400px){
+        padding: 10% 5%;
     }
-} 
+    @media (min-width: 700px) {
+        grid-template-rows: 200px 100px 200px;
+    }
+    @media (min-width: 900px){
+        grid-template-areas: 
+        "f g overlap-text h i"
+        "f k overlap-text l i"
+        "j k overlap-text l m";
+        grid-template-columns: 1fr 1fr 30% 1fr 1fr;
+        padding: 0;   
+    }
+    @media (min-width: 1000px){
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 150px 150px 150px;
+        }
+    @media (min-width: 1400px){
+        padding: 5%;
+        grid-template-rows: 200px 200px 200px;
+    }
+    @media (min-width: 1700px){
+        padding: 8%;
+    }
+    
+    
+ } 
 .overlappicWrapper {
     position: relative;
     height: 100%;
@@ -29,39 +54,88 @@
 
 .overlap-article-img1 {
     grid-area: f;
+    display: none;
+    @media (min-width: 900px){
+        display: unset;
+    }
 
 }
 .overlap-article-img2 {
     grid-area: g;
+    @media (min-width: 900px) {
+        grid-area: g;
+    }
 }
 .overlap-article-img3 {
     grid-area: h;
+    @media (min-width: 900px) {
+        grid-area: h;
+    }
 }
 .overlap-article-img4 {
     grid-area: i;
+    display: none;
+    @media (min-width: 900px){
+        display: unset;
+    }
 }
 .overlap-text {
     grid-area: overlap-text;
     align-self: center;
-    z-index: 1;
+    z-index: 2;
     background: white;
-    padding: 3em 6em;
-    margin: 3em -10em;
-    @media (max-width: 1000px) {
-        margin: 3em -15em;
+    padding: 15px;
+    margin: -16em 2em;
+    @media (min-width: 600px) {
+        margin: -16em 5em;
     }
+    @media (min-width: 700px) {
+        grid-area: overlap-text;
+        // max-inline-size: 70vw;
+        padding: 40px;
+        margin: -13em 5em;
+        z-index: 1;
+    }
+    @media (min-width: 900px) {
+        padding: 3em 6em;
+        margin: 3em -12em;
+    } 
+    h4 {
+        font-size: 1.5em;
+        margin-top: 0;
+    @media (min-width: 900px) {
+        h4 {
+            font-size: 2vw;
+        }
+    }
+}
+
 }
 .overlap-article-img5 {
     grid-area: j;
+    @media (min-width: 900px) {
+        grid-area: j;
+    }
 }
 .overlap-article-img6 {
     grid-area: k;
+    display: none;
+    @media (min-width: 900px){
+        display: unset;
+    }
 }
 .overlap-article-img7 {
     grid-area: l;
+    display: none;
+    @media (min-width: 900px){
+        display: unset;
+}
 }
 .overlap-article-img8 {
     grid-area: m;
+    @media (min-width: 900px) {
+        grid-area: m;
+    }
 }
 .overlap-text h4,
 .overlap-text p {
