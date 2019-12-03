@@ -1,30 +1,33 @@
 .article-with-overlap {
     display: grid;
     padding: 20% 0 10% 0;
-    grid-gap: 2em;
+    grid-gap: 1.5em;
     margin: 5%;
     grid-template-areas: 
     "g h"
     "overlap-text overlap-text"
     "j m";
     grid-template-columns: 45% 45%;
-    grid-template-rows: 200px 150px 200px;
+    grid-template-rows: 150px 100px 150px;
     @media (min-width: 400px){
-        padding: 10% 5%;
+        padding: 10% 2%;
+        grid-gap: 2em;
+        grid-template-rows: 200px 100px 200px;
     }
     @media (min-width: 700px) {
-        grid-template-rows: 200px 100px 200px;
+        padding: 10% 5%;
     }
     @media (min-width: 900px){
         grid-template-areas: 
         "f g overlap-text h i"
         "f k overlap-text l i"
         "j k overlap-text l m";
-        grid-template-columns: 1fr 1fr 30% 1fr 1fr;
+        
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         padding: 0;   
     }
     @media (min-width: 1000px){
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 30% 1fr 1fr;
         grid-template-rows: 150px 150px 150px;
         }
     @media (min-width: 1400px){

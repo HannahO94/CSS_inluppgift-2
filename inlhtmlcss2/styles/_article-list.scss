@@ -16,49 +16,46 @@
 }
 .half {
     box-sizing: border-box;
-    flex-basis: 30%;
-    max-width: 50%;
-    padding-bottom: 4vh;
-    flex-grow: 1;
-    min-height: 30em;
+    flex-basis: 80%;
+    max-width: 80%;
+    margin: 0;
+    min-height: auto;
+    
+    @media (min-width: 1200px){
+        box-sizing: border-box;
+        flex-basis: 30%;
+        max-width: 50%;
+        padding-bottom: 4vh;
+        flex-grow: 1;
+        min-height: 30em;
+    }
+    p {
+        padding: 0;
+    }
 }
 div.half { 
     padding: 2vw;
+    @media (min-width: 1200px) {
+    padding-top: 7em;
+    }
 }
 .share img {
     object-fit: cover;
     padding: 2vw;
-}
-// .picture {
-//     position: absolute;
-//     width: 100%;
-//     height: 100%;
-// }
-// .picturewrapper {
-//     position: relative;
-// }
-
-@media (max-width: 1000px) {
-    .half {
-        box-sizing: border-box;
-        flex-basis: 80%;
-        max-width: 80%;
-        margin: 0;
-        min-height: auto;
-        p {
-            padding: 0;
+    margin-bottom: 1em;
+    order: 1;
+    @media (min-width: 1200px){
+        order: 0;
         }
+}
+h2 {
+    font-size: 2.3em;
+    margin-bottom: 0;
+    @media (min-width: 1000px){
+        font-size: 2.5vw;
     }
-    h2 {
-        font-size: 2.3em;
-        margin-bottom: 0;
-    }
-    h3 {
-        font-size: 2em;
-        margin-top: 0;
-    }
-    img.half {
-        margin-bottom: 1em;;
-    }
-    
+}
+h3 {
+    font-size: 2em;
+    margin-top: 0;
 }

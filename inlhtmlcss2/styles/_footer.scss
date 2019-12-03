@@ -10,20 +10,33 @@ footer {
     align-items: center;
     flex-wrap: wrap;
     padding-bottom: 3vh;
-    min-height: 248px;
+    min-height: 200px;
+    @media (min-width: 700px){
+        min-height: 248px;
+    }
 }
 .navbarfoot ul {
     list-style: none;
     display: flex;
     flex-direction: row;
     width: 100%;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     font-weight: bold;
     margin-bottom: 3vh;
+    padding: 0;
+    @media (min-width: 400px){
+        padding: 1em;
+    }
+    @media (min-width: 500px){
+        padding: 2em;
+        justify-content: center;
+    }
+    
 }
 .navbarfoot li {
-    padding-right: 2vw;;
+    padding-right: 2vw;
+    font-size: 1em;
 }
 .footlogo {
     flex-basis: 100%;
@@ -35,6 +48,6 @@ footer {
 @media (max-width: 1000px){
     .navbarfoot li {
         padding: 0.5em;
-        font-size: 2vw;
+        font-size: 1em;
     }
 }

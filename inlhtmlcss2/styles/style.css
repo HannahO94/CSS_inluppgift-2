@@ -262,50 +262,74 @@ h1 {
 .half {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -ms-flex-preferred-size: 30%;
-      flex-basis: 30%;
-  max-width: 50%;
-  padding-bottom: 4vh;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  min-height: 30em;
+  -ms-flex-preferred-size: 80%;
+      flex-basis: 80%;
+  max-width: 80%;
+  margin: 0;
+  min-height: auto;
+}
+
+@media (min-width: 1200px) {
+  .half {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+    max-width: 50%;
+    padding-bottom: 4vh;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    min-height: 30em;
+  }
+}
+
+.half p {
+  padding: 0;
 }
 
 div.half {
   padding: 2vw;
 }
 
+@media (min-width: 1200px) {
+  div.half {
+    padding-top: 7em;
+  }
+}
+
 .share img {
   -o-object-fit: cover;
      object-fit: cover;
   padding: 2vw;
+  margin-bottom: 1em;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
 }
 
-@media (max-width: 1000px) {
-  .half {
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    -ms-flex-preferred-size: 80%;
-        flex-basis: 80%;
-    max-width: 80%;
-    margin: 0;
-    min-height: auto;
+@media (min-width: 1200px) {
+  .share img {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
   }
-  .half p {
-    padding: 0;
-  }
+}
+
+h2 {
+  font-size: 2.3em;
+  margin-bottom: 0;
+}
+
+@media (min-width: 1000px) {
   h2 {
-    font-size: 2.3em;
-    margin-bottom: 0;
+    font-size: 2.5vw;
   }
-  h3 {
-    font-size: 2em;
-    margin-top: 0;
-  }
-  img.half {
-    margin-bottom: 1em;
-  }
+}
+
+h3 {
+  font-size: 2em;
+  margin-top: 0;
 }
 
 .fulline2 {
@@ -498,9 +522,6 @@ div.half {
 
 @media (min-width: 900px) {
   .newsAboutUs {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     display: -ms-grid;
     display: grid;
         grid-template-areas: "picture inner-container" "picture inner-container";
@@ -626,41 +647,43 @@ div.half {
   display: -ms-grid;
   display: grid;
   padding: 20% 0 10% 0;
-  grid-gap: 2em;
+  grid-gap: 1.5em;
   margin: 5%;
       grid-template-areas: "g h" "overlap-text overlap-text" "j m";
   -ms-grid-columns: 45% 45%;
       grid-template-columns: 45% 45%;
-  -ms-grid-rows: 200px 150px 200px;
-      grid-template-rows: 200px 150px 200px;
+  -ms-grid-rows: 150px 100px 150px;
+      grid-template-rows: 150px 100px 150px;
 }
 
 @media (min-width: 400px) {
   .article-with-overlap {
-    padding: 10% 5%;
+    padding: 10% 2%;
+    grid-gap: 2em;
+    -ms-grid-rows: 200px 100px 200px;
+        grid-template-rows: 200px 100px 200px;
   }
 }
 
 @media (min-width: 700px) {
   .article-with-overlap {
-    -ms-grid-rows: 200px 100px 200px;
-        grid-template-rows: 200px 100px 200px;
+    padding: 10% 5%;
   }
 }
 
 @media (min-width: 900px) {
   .article-with-overlap {
         grid-template-areas: "f g overlap-text h i" "f k overlap-text l i" "j k overlap-text l m";
-    -ms-grid-columns: 1fr 1fr 30% 1fr 1fr;
-        grid-template-columns: 1fr 1fr 30% 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     padding: 0;
   }
 }
 
 @media (min-width: 1000px) {
   .article-with-overlap {
-    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr 30% 1fr 1fr;
+        grid-template-columns: 1fr 1fr 30% 1fr 1fr;
     -ms-grid-rows: 150px 150px 150px;
         grid-template-rows: 150px 150px 150px;
   }
@@ -877,7 +900,13 @@ footer {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding-bottom: 3vh;
-  min-height: 248px;
+  min-height: 200px;
+}
+
+@media (min-width: 700px) {
+  .navbarfoot {
+    min-height: 248px;
+  }
 }
 
 .navbarfoot ul {
@@ -890,18 +919,34 @@ footer {
       -ms-flex-direction: row;
           flex-direction: row;
   width: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   font-weight: bold;
   margin-bottom: 3vh;
+  padding: 0;
+}
+
+@media (min-width: 400px) {
+  .navbarfoot ul {
+    padding: 1em;
+  }
+}
+
+@media (min-width: 500px) {
+  .navbarfoot ul {
+    padding: 2em;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .navbarfoot li {
   padding-right: 2vw;
+  font-size: 1em;
 }
 
 .footlogo {
@@ -915,7 +960,7 @@ footer {
 @media (max-width: 1000px) {
   .navbarfoot li {
     padding: 0.5em;
-    font-size: 2vw;
+    font-size: 1em;
   }
 }
 /*# sourceMappingURL=style.css.map */

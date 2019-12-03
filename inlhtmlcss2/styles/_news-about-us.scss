@@ -6,7 +6,6 @@
     padding: 0;
     
     @media (min-width: 900px) {
-        display: flex;
         display: grid;
         grid-template-areas: 
         "picture inner-container"
