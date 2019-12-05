@@ -360,9 +360,13 @@ h1 {
   }
 }
 
+div.half {
+  padding: 2vw;
+}
+
 @media (min-width: 1200px) {
   div.half {
-    padding: 7em 5% 0 5%;
+    padding: 4em 5% 4em 5%;
   }
 }
 
@@ -522,6 +526,7 @@ h3 {
   font-weight: bold;
   font-size: 1.2em;
   text-align: start;
+  margin-bottom: 2%;
   padding: 0;
 }
 
@@ -548,7 +553,7 @@ h3 {
   display: grid;
   -ms-grid-columns: 1fr 1fr auto;
       grid-template-columns: 1fr 1fr auto;
-  grid-auto-rows: auto;
+  grid-auto-rows: minmax(auto, 200px);
   grid-gap: 1.5em;
   width: 100%;
 }
@@ -668,8 +673,8 @@ h3 {
 }
 
 @media (min-width: 900px) {
-  .inner-container-news h4 h4 {
-    font-size: 2em;
+  .inner-container-news h4 {
+    font-size: 2vw;
   }
 }
 
@@ -913,13 +918,14 @@ h3 {
 
 .overlap-text h4 {
   margin-top: 0;
+  margin-bottom: 2%;
   color: #ffaf89;
   font-weight: bold;
   font-size: 1.2em;
 }
 
 @media (min-width: 900px) {
-  .overlap-text h4 h4 {
+  .overlap-text h4 {
     font-size: 2vw;
   }
 }

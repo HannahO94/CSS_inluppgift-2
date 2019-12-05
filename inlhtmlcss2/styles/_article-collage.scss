@@ -22,6 +22,7 @@
         &--bigsize {
             @include text-styling( #9d5c5f, bold, 1.2em);
             text-align: start;
+            margin-bottom: 2%;
             padding: 0;
             @media (min-width: 1000px) {
                 font-size: 2vw;
@@ -40,7 +41,7 @@
 .collage-pictures{
     display: grid;
     grid-template-columns: 1fr 1fr auto;
-    grid-auto-rows: auto;
+    grid-auto-rows: minmax(auto, 200px);
     grid-gap: 1.5em;
     width: 100%;
     @media (min-width: 750px) {
@@ -68,7 +69,6 @@
         display: unset;
     }
 }   
-// .collage-img4
 .collage-pictures__img4 {
     grid-row: 2 / 3;
     grid-column: 1 / 3;
