@@ -27,6 +27,9 @@
     }
     &__item {
     padding-right: 4vw;
+    &:hover {
+        transform: scale(1.1);
+    }
     @media (min-width: 500px){
         margin: 0 1.4em 0 1.4em;
     }
@@ -37,6 +40,7 @@
         text-decoration: none;
         color: #eaddd9;
     }
+    
 }
 }
 .logo{
@@ -45,5 +49,8 @@
     border: none;
     background-color: $color--sitebackground-and-nav;
     @include text-styling ($color--text-1, normal, 26px);
+    &:hover {
+        transform: scale(1.1);
+    }
 }
 

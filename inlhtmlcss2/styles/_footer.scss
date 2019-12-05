@@ -37,6 +37,9 @@ footer {
 .navbarfoot li {
     padding-right: 2vw;
     font-size: 1em;
+    &:hover {
+        transform: scale(1.1);
+    }
 }
 .footlogo {
     flex-basis: 100%;
@@ -44,6 +47,9 @@ footer {
     margin-top: 3vh;
     font-family: 'Unica One', cursive;
     @include text-styling ($color--text-1, normal, 26px);
+    &:hover {
+        transform: scale(1.1);
+    }
 
 }
 @media (max-width: 1000px){

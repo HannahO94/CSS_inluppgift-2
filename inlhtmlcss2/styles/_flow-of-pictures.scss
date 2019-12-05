@@ -17,6 +17,7 @@
     &__picflow--picsize {
         width: 99px;
         height: 101px;
+        transition: all 200ms ease-in;
         @media (min-width: 800px) {
             width: 130px;
             height: 130px;
@@ -28,6 +29,9 @@
         @media (min-width: 1500px){
             width: 200px;
             height: 200px;
+        }
+        &:hover {
+            transform: scale(1.1);
         }
     }
     &__picflow {

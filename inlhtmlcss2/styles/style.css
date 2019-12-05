@@ -143,6 +143,11 @@ h4 {
   padding-right: 4vw;
 }
 
+.navbartop__item:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 @media (min-width: 500px) {
   .navbartop__item {
     margin: 0 1.4em 0 1.4em;
@@ -168,6 +173,11 @@ h4 {
   color: #ff8673;
   font-weight: normal;
   font-size: 26px;
+}
+
+.logo:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .mainpic {
@@ -310,9 +320,9 @@ h1 {
 .half {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -ms-flex-preferred-size: 80%;
-      flex-basis: 80%;
-  max-width: 80%;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  max-width: 100%;
   margin: 0;
   min-height: auto;
 }
@@ -339,6 +349,7 @@ h1 {
 .half p {
   letter-spacing: 0.59px;
   font-size: 1em;
+  padding: 0 5% 0 5%;
 }
 
 @media (min-width: 1100px) {
@@ -350,7 +361,7 @@ h1 {
 
 @media (min-width: 1200px) {
   div.half {
-    padding-top: 7em;
+    padding: 7em 5% 0 5%;
   }
 }
 
@@ -424,6 +435,8 @@ h3 {
 .flow-pictures__picflow--picsize {
   width: 99px;
   height: 101px;
+  -webkit-transition: all 200ms ease-in;
+  transition: all 200ms ease-in;
 }
 
 @media (min-width: 800px) {
@@ -445,6 +458,11 @@ h3 {
     width: 200px;
     height: 200px;
   }
+}
+
+.flow-pictures__picflow--picsize:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .flow-pictures__picflow {
@@ -858,6 +876,13 @@ h3 {
   background-color: #9aa5aa;
   padding: 15px;
   margin: -16em 2em;
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+}
+
+.overlap-text:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 @media (min-width: 600px) {
@@ -1041,6 +1066,11 @@ footer {
   font-size: 1em;
 }
 
+.navbarfoot li:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 .footlogo {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
@@ -1050,6 +1080,11 @@ footer {
   color: #ff8673;
   font-weight: normal;
   font-size: 26px;
+}
+
+.footlogo:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 @media (max-width: 1000px) {
