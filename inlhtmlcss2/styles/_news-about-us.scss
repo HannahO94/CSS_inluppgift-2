@@ -34,7 +34,7 @@
         grid-gap: 2em;
     }
     h4 {
-        @include text-styling($color--text-1, bold, 1.5em);
+        @include text-styling($color--text-1, bold, 1.2em);
         margin-top: 0;
         margin-bottom: 0;
         @media (min-width: 900px) {

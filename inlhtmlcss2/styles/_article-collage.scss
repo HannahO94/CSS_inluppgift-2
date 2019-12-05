@@ -20,7 +20,7 @@
             width: 50%;
         }
         &--bigsize {
-            @include text-styling( #9d5c5f, bold, 1.5em);
+            @include text-styling( #9d5c5f, bold, 1.2em);
             text-align: start;
             padding: 0;
             @media (min-width: 1000px) {
