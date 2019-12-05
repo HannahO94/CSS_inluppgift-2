@@ -23,7 +23,7 @@
         "f k overlap-text l i"
         "j k overlap-text l m";
         
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: repeat(5, 1fr);
         padding: 0;   
     }
     @media (min-width: 1000px){
@@ -45,14 +45,9 @@
     height: 100%;
     width: 100%;
   }
+
 .position {
-    display: block;
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-    max-width: 100%;
-    max-height: 100%;
-    position: absolute;
+    @extend %picture-position;
   }
 
 .overlap-article-img1 {
@@ -94,19 +89,17 @@
     }
     @media (min-width: 700px) {
         grid-area: overlap-text;
-        // max-inline-size: 70vw;
         padding: 40px;
-        margin: -13em 5em;
+        margin: -13em 3em;
         z-index: 1;
     }
     @media (min-width: 900px) {
         padding: 3em 6em;
-        margin: 3em -12em;
+        margin: -3em -12em;
     } 
     h4 {
-        font-size: 1.5em;
         margin-top: 0;
-        color: #ffaf89;
+        @include text-styling ( #ffaf89, bold, 1.5em);
     @media (min-width: 900px) {
         h4 {
             font-size: 2vw;
@@ -148,7 +141,10 @@
     padding: 0;
 }
 .overlap-text p {
-    color: #ffffff;
     line-height: 1.38;
     letter-spacing: 0.59px;
+    @include text-styling ( #ffffff, normal, 1em);
+    @media (min-width: 1100px){
+        font-size: 20px;
+    }
 }

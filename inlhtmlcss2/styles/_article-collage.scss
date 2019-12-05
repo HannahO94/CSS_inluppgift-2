@@ -14,18 +14,17 @@
 }
 .collage-text {
     grid-area: text;
-    box-sizing: border-box;
-    text-align: start;
+    @extend %textproperties;
     align-self: center;
-    padding: 0 9vw 0 1vw;;
     width: 100%;
     @media (min-width: 750px) {
         width: 50%;
     }
     h4 {
-        font-size: 1.5em;
-        margin-top: 0;
-        color: #9d5c5f;
+        @include text-styling( #9d5c5f, bold, 1.5em);
+        // font-size: 1.5em;
+        // margin-top: 0;
+        // color: #9d5c5f;
     @media (min-width: 1000px) {
         h4 {
             font-size: 2vw;
@@ -33,11 +32,18 @@
     }
 }
 }
-.collage-text p,
+.collage-text p{
+    text-align: start;
+    padding: 0;
+    font-size: 1em;
+    @media (min-width: 1100px){
+        font-size: 20px;
+    }
+}
+
 .collage-text h4 {
     text-align: start;
     padding: 0;
-   
 }
 .collage-pictures {
     display: grid;

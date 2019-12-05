@@ -1,10 +1,12 @@
 .newsAboutUs {
     display: flex;
     flex-wrap: wrap;
-    height: 850px;
+    height: 650px;
     background-color: $color--sitebackground-and-nav;
     padding: 0;
-    
+    @media (min-width: 900px){
+        height: 850px;
+    }
     @media (min-width: 900px) {
         display: grid;
         grid-template-areas: 
@@ -32,11 +34,12 @@
         grid-gap: 2em;
     }
     h4 {
-        font-size: 1.5em;
+        @include text-styling($color--text-1, bold, 1.5em);
         margin-top: 0;
-    @media (min-width: 900px) {
+        margin-bottom: 0;
+        @media (min-width: 900px) {
         h4 {
-            font-size: 2vw;
+            font-size: 2em;
         }
     }
 }
@@ -60,39 +63,34 @@
 }
 }
 .newsPic {
-    display: block;
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-    max-width: 100%;
-    max-height: 100%;
-    position: absolute;
+    @extend %picture-position;
 }
 .first-news-text {
     grid-area: first-text;
-    box-sizing: border-box;
-    text-align: start;
+    @extend %textproperties;
     align-self: flex-start;
-    padding: 5em 9vw 0 1vw;;
+    padding-left: 10%;
+    padding-right: 0;
     @media (min-width: 900px) {
     align-self: end;
-    }
-    & h4 {
-        color: $color--text-1;
+    margin-top: 10%;
     }
 }
 .second-news-text {
+    @extend %textproperties;
     grid-area: second-text;
-    box-sizing: border-box;
-    text-align: start;
-    padding: 0 9vw 5em 1vw;; 
-    & h4 {
-        color: #ff8673;
-    }
+    padding-left: 10%;
+    padding-right: 0;
+    @media (min-width: 900px) {
+        margin-bottom: 10%;
+        }
 }
 .first-news-text p,
 .second-news-text p {
     text-align: start;
     padding: 0;
-    color: #fafafa;
+    @include text-styling ($color--sitebackground-1, normal, 1em);
+    @media (min-width: 1100px){
+        font-size: 20px;
+    }
 }

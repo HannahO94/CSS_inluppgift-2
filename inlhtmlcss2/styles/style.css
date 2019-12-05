@@ -1,3 +1,21 @@
+.collage-text, .first-news-text, .second-news-text {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: start;
+  padding: 0 9vw 0 1vw;
+}
+
+.newsPic, .position {
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+}
+
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -26,7 +44,6 @@ h3 {
 
 p {
   text-align: center;
-  padding: 0 4vw;
 }
 
 .gridpic {
@@ -94,7 +111,7 @@ h4 {
   }
 }
 
-.navbarhead ul {
+.navbartop {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -106,7 +123,7 @@ h4 {
 }
 
 @media (min-width: 500px) {
-  .navbarhead ul {
+  .navbartop {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -114,7 +131,7 @@ h4 {
 }
 
 @media (min-width: 700px) {
-  .navbarhead ul {
+  .navbartop {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
@@ -122,38 +139,35 @@ h4 {
   }
 }
 
-.navbarhead li {
+.navbartop__item {
   padding-right: 4vw;
 }
 
 @media (min-width: 500px) {
-  .navbarhead li {
+  .navbartop__item {
     margin: 0 1.4em 0 1.4em;
   }
 }
 
 @media (min-width: 700px) {
-  .navbarhead li {
+  .navbartop__item {
     margin: 0;
   }
 }
 
+.navbartop__item--no-link {
+  text-decoration: none;
+  color: #eaddd9;
+}
+
 .logo {
-  padding: 0.5em;
-  font-weight: bold;
-  padding-left: 3vw;
   padding: 0.5vh 4vw;
-  font-weight: bold;
   font-family: 'Unica One', cursive;
-  font-size: 26px;
   border: none;
   background-color: #394951;
   color: #ff8673;
-}
-
-a {
-  text-decoration: none;
-  color: #eaddd9;
+  font-weight: normal;
+  font-size: 26px;
 }
 
 .mainpic {
@@ -174,14 +188,23 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 @media (min-width: 800px) {
   .mainpic {
     min-height: 780px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .mainpic {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    padding-top: 10vw;
   }
 }
 
@@ -200,6 +223,14 @@ a {
   }
 }
 
+@media (min-width: 1000px) {
+  .center {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    padding-left: 5vw;
+  }
+}
+
 @media (min-width: 1100px) {
   .center {
     width: 40%;
@@ -208,14 +239,22 @@ a {
 
 .center p {
   color: #f0f0f0;
-  font-size: 25px;
+  letter-spacing: 0.59px;
+  font-size: 1.1em;
   font-weight: bold;
   line-height: 1.04;
   letter-spacing: 0.92px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 1100px) {
+  .center p {
+    font-size: 23px;
+  }
 }
 
 h1 {
-  font-size: 1.5em;
+  font-size: 1.8em;
   margin: 0;
   color: #ff8673;
   letter-spacing: 1.92px;
@@ -298,13 +337,15 @@ h1 {
 }
 
 .half p {
-  padding: 0 5em 0 5em;
   letter-spacing: 0.59px;
-  font-size: 16px;
+  font-size: 1em;
 }
 
-div.half {
-  padding: 2vw;
+@media (min-width: 1100px) {
+  .half p {
+    font-size: 20px;
+    padding: 0 5em 0 5em;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -332,7 +373,7 @@ div.half {
 }
 
 h2 {
-  font-size: 2.7em;
+  font-size: 1.9em;
   margin-bottom: 0;
   letter-spacing: 1.77px;
 }
@@ -344,8 +385,13 @@ h2 {
 }
 
 h3 {
-  font-size: 2.5em;
-  margin-top: 0;
+  font-size: 1.6em;
+}
+
+@media (min-width: 1000px) {
+  h3 {
+    font-size: 2.5em;
+  }
 }
 
 .fulline2 {
@@ -440,13 +486,9 @@ h3 {
 
 .collage-text {
   grid-area: text;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  text-align: start;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  padding: 0 9vw 0 1vw;
   width: 100%;
 }
 
@@ -457,9 +499,9 @@ h3 {
 }
 
 .collage-text h4 {
-  font-size: 1.5em;
-  margin-top: 0;
   color: #9d5c5f;
+  font-weight: bold;
+  font-size: 1.5em;
 }
 
 @media (min-width: 1000px) {
@@ -468,7 +510,18 @@ h3 {
   }
 }
 
-.collage-text p,
+.collage-text p {
+  text-align: start;
+  padding: 0;
+  font-size: 1em;
+}
+
+@media (min-width: 1100px) {
+  .collage-text p {
+    font-size: 20px;
+  }
+}
+
 .collage-text h4 {
   text-align: start;
   padding: 0;
@@ -541,9 +594,15 @@ h3 {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  height: 850px;
+  height: 650px;
   background-color: #394951;
   padding: 0;
+}
+
+@media (min-width: 900px) {
+  .newsAboutUs {
+    height: 850px;
+  }
 }
 
 @media (min-width: 900px) {
@@ -585,13 +644,16 @@ h3 {
 }
 
 .inner-container-news h4 {
+  color: #ff8673;
+  font-weight: bold;
   font-size: 1.5em;
   margin-top: 0;
+  margin-bottom: 0;
 }
 
 @media (min-width: 900px) {
   .inner-container-news h4 h4 {
-    font-size: 2vw;
+    font-size: 2em;
   }
 }
 
@@ -626,25 +688,12 @@ h3 {
   }
 }
 
-.newsPic {
-  display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 100%;
-  width: 100%;
-  max-width: 100%;
-  max-height: 100%;
-  position: absolute;
-}
-
 .first-news-text {
   grid-area: first-text;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  text-align: start;
   -ms-flex-item-align: start;
       align-self: flex-start;
-  padding: 5em 9vw 0 1vw;
+  padding-left: 10%;
+  padding-right: 0;
 }
 
 @media (min-width: 900px) {
@@ -652,23 +701,20 @@ h3 {
     -ms-flex-item-align: end;
         -ms-grid-row-align: end;
         align-self: end;
+    margin-top: 10%;
   }
-}
-
-.first-news-text h4 {
-  color: #ff8673;
 }
 
 .second-news-text {
   grid-area: second-text;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  text-align: start;
-  padding: 0 9vw 5em 1vw;
+  padding-left: 10%;
+  padding-right: 0;
 }
 
-.second-news-text h4 {
-  color: #ff8673;
+@media (min-width: 900px) {
+  .second-news-text {
+    margin-bottom: 10%;
+  }
 }
 
 .first-news-text p,
@@ -676,6 +722,15 @@ h3 {
   text-align: start;
   padding: 0;
   color: #fafafa;
+  font-weight: normal;
+  font-size: 1em;
+}
+
+@media (min-width: 1100px) {
+  .first-news-text p,
+  .second-news-text p {
+    font-size: 20px;
+  }
 }
 
 .article-with-overlap {
@@ -709,8 +764,8 @@ h3 {
 @media (min-width: 900px) {
   .article-with-overlap {
         grid-template-areas: "f g overlap-text h i" "f k overlap-text l i" "j k overlap-text l m";
-    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    -ms-grid-columns: (1fr)[5];
+        grid-template-columns: repeat(5, 1fr);
     padding: 0;
   }
 }
@@ -742,17 +797,6 @@ h3 {
   position: relative;
   height: 100%;
   width: 100%;
-}
-
-.position {
-  display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 100%;
-  width: 100%;
-  max-width: 100%;
-  max-height: 100%;
-  position: absolute;
 }
 
 .overlap-article-img1 {
@@ -832,7 +876,7 @@ h3 {
     -ms-grid-column-span: 2;
     grid-area: overlap-text;
     padding: 40px;
-    margin: -13em 5em;
+    margin: -13em 3em;
     z-index: 1;
   }
 }
@@ -840,14 +884,15 @@ h3 {
 @media (min-width: 900px) {
   .overlap-text {
     padding: 3em 6em;
-    margin: 3em -12em;
+    margin: -3em -12em;
   }
 }
 
 .overlap-text h4 {
-  font-size: 1.5em;
   margin-top: 0;
   color: #ffaf89;
+  font-weight: bold;
+  font-size: 1.5em;
 }
 
 @media (min-width: 900px) {
@@ -915,9 +960,17 @@ h3 {
 }
 
 .overlap-text p {
-  color: #ffffff;
   line-height: 1.38;
   letter-spacing: 0.59px;
+  color: #ffffff;
+  font-weight: normal;
+  font-size: 1em;
+}
+
+@media (min-width: 1100px) {
+  .overlap-text p {
+    font-size: 20px;
+  }
 }
 
 footer {
@@ -932,7 +985,6 @@ footer {
   display: -ms-flexbox;
   display: flex;
   background-color: #394951;
-  color: #ff8673;
   min-width: 100%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -997,7 +1049,10 @@ footer {
       flex-basis: 100%;
   text-align: center;
   margin-top: 3vh;
-  font-weight: bold;
+  font-family: 'Unica One', cursive;
+  color: #ff8673;
+  font-weight: normal;
+  font-size: 26px;
 }
 
 @media (max-width: 1000px) {
@@ -1005,5 +1060,10 @@ footer {
     padding: 0.5em;
     font-size: 1em;
   }
+}
+
+a {
+  text-decoration: none;
+  color: #eaddd9;
 }
 /*# sourceMappingURL=style.css.map */

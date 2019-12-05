@@ -1,0 +1,18 @@
+%textproperties {
+    box-sizing: border-box;
+    text-align: start;
+    padding: 0 9vw 0 1vw;
+
+}
+%fonth4 {
+    font-size: 1.5em;
+}
+%picture-position {
+    display: block;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+  }

@@ -5,7 +5,6 @@ footer {
 .navbarfoot {
     display:flex;
     background-color: $color--sitebackground-and-nav;
-    color: $color--text-1;
     min-width: 100%;
     justify-content: center;
     align-items: center;
@@ -43,7 +42,8 @@ footer {
     flex-basis: 100%;
     text-align: center;
     margin-top: 3vh;
-    font-weight: bold;
+    font-family: 'Unica One', cursive;
+    @include text-styling ($color--text-1, normal, 26px);
 
 }
 @media (max-width: 1000px){
@@ -51,4 +51,8 @@ footer {
         padding: 0.5em;
         font-size: 1em;
     }
+}
+a {
+    text-decoration: none;
+    color: #eaddd9;
 }
