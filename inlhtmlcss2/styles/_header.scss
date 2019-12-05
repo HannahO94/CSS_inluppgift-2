@@ -20,16 +20,26 @@
     text-align: center;
     font-weight: bold;
     
+    
     @media (min-width: 800px) {
         width: 60%;
      }
     @media (min-width: 1100px) {
        width: 40%;
     }
+    p {
+        color: #f0f0f0;
+        font-size: 25px;
+        font-weight: bold;
+        line-height: 1.04;
+        letter-spacing: 0.92px;
+    }
 }
 h1 {
     font-size: 1.5em;
     margin: 0;
+    color: $color--text-1;
+    letter-spacing: 1.92px;
     @media (min-width: 420px) {
         font-size: 2em;
      }
@@ -37,6 +47,6 @@ h1 {
         font-size: 2.3em;
      }
     @media (min-width: 800px) {
-        font-size: 2.7em;
+        font-size: 52px;
      }
 }

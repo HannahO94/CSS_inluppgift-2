@@ -2,6 +2,7 @@
     flex-basis: 100%;
     text-align: center;
     padding-right: 4vw;
+    color: #9d5c5f;
 }
 .marg {
     margin: 5%;
@@ -20,6 +21,9 @@
     max-width: 80%;
     margin: 0;
     min-height: auto;
+    & h3 {
+        color: #9d5c5f;
+    }
     
     @media (min-width: 1200px){
         box-sizing: border-box;
@@ -30,7 +34,9 @@
         min-height: 30em;
     }
     p {
-        padding: 0;
+        padding: 0 5em 0 5em;
+        letter-spacing: 0.59px;
+        font-size: 16px;
     }
 }
 div.half { 
@@ -49,13 +55,16 @@ div.half {
         }
 }
 h2 {
-    font-size: 2.3em;
+    font-size: 2.7em;
+
     margin-bottom: 0;
+    letter-spacing: 1.77px;
     @media (min-width: 1000px){
-        font-size: 2.5vw;
+        font-size: 2.7em;
     }
 }
 h3 {
-    font-size: 2em;
+    font-size: 2.5em;
     margin-top: 0;
 }
+

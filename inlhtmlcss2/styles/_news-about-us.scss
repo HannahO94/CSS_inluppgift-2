@@ -2,7 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     height: 850px;
-    background: white;
+    background-color: $color--sitebackground-and-nav;
     padding: 0;
     
     @media (min-width: 900px) {
@@ -73,19 +73,26 @@
     box-sizing: border-box;
     text-align: start;
     align-self: flex-start;
-    padding: 0 9vw 0 1vw;;
+    padding: 5em 9vw 0 1vw;;
     @media (min-width: 900px) {
     align-self: end;
+    }
+    & h4 {
+        color: $color--text-1;
     }
 }
 .second-news-text {
     grid-area: second-text;
     box-sizing: border-box;
     text-align: start;
-    padding: 0 9vw 0 1vw;; 
+    padding: 0 9vw 5em 1vw;; 
+    & h4 {
+        color: #ff8673;
+    }
 }
 .first-news-text p,
 .second-news-text p {
     text-align: start;
     padding: 0;
+    color: #fafafa;
 }

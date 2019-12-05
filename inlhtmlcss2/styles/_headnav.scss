@@ -2,7 +2,7 @@
     display: flex;
     margin-left: 0;
     top: 0;
-    background-color: rgb(233, 233, 233);
+    background-color: $color--sitebackground-and-nav;
     margin: 0;
     font-weight: bold;
     align-items: center;
@@ -39,8 +39,15 @@
     padding: 0.5em;
     font-weight: bold;
     padding-left: 3vw;
+    padding: 0.5vh 4vw;
+    font-weight: bold;
+    font-family: 'Unica One', cursive;
+    font-size: 26px;
+    border: none;
+    background-color: $color--sitebackground-and-nav;
+    color: $color--text-1;
 }
 a {
     text-decoration: none;
-    color: inherit;
+    color: #eaddd9;
 }

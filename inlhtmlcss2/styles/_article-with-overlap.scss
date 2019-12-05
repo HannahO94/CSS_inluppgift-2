@@ -86,7 +86,7 @@
     grid-area: overlap-text;
     align-self: center;
     z-index: 2;
-    background: white;
+    background-color: #9aa5aa;
     padding: 15px;
     margin: -16em 2em;
     @media (min-width: 600px) {
@@ -106,12 +106,13 @@
     h4 {
         font-size: 1.5em;
         margin-top: 0;
+        color: #ffaf89;
     @media (min-width: 900px) {
         h4 {
             font-size: 2vw;
         }
     }
-}
+    }
 
 }
 .overlap-article-img5 {
@@ -145,4 +146,9 @@
     box-sizing: border-box;
     text-align: start;
     padding: 0;
+}
+.overlap-text p {
+    color: #ffffff;
+    line-height: 1.38;
+    letter-spacing: 0.59px;
 }

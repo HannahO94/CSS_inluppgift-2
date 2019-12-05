@@ -1,17 +1,18 @@
 .fulline2 {
     flex-basis: 100%;
     text-align: center;
+    color: $color--text-1;
+    padding-bottom: 1em;
 }
 .flow {
     display:flex;
     flex-wrap: wrap;
     padding: 5% 0;
     justify-content: center;
-    background-color:white;
+    background-color: $color--sitebackground-and-nav;
     @media (min-width: 1000px){
-        .flow{ 
-            padding: 5% 10% 5% 10%;
-        }
+        padding: 5% 10% 5% 10%;
+
         }
     img {
         width: 99px;
@@ -23,6 +24,10 @@
         @media (min-width: 1000px) {
             width: 165px;
             height: 165px;
+        }
+        @media (min-width: 1500px){
+            width: 200px;
+            height: 200px;
         }
         }
 }
