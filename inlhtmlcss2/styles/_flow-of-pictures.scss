@@ -1,20 +1,20 @@
-.fulline2 {
-    flex-basis: 100%;
-    text-align: center;
-    color: $color--text-1;
-    padding-bottom: 1em;
-}
-.flow {
+.flow-pictures {
     display:flex;
     flex-wrap: wrap;
     padding: 5% 0;
     justify-content: center;
     background-color: $color--sitebackground-and-nav;
+    &__fulline2 {
+        flex-basis: 100%;
+        text-align: center;
+        color: $color--text-1;
+        padding-bottom: 1em;
+    }
     @media (min-width: 1000px){
         padding: 5% 10% 5% 10%;
 
         }
-    img {
+    &__picflow--picsize {
         width: 99px;
         height: 101px;
         @media (min-width: 800px) {
@@ -29,13 +29,16 @@
             width: 200px;
             height: 200px;
         }
-        }
+    }
+    &__picflow {
+        margin: 10px;
+        @media (min-width: 1000px){
+            .picflow {
+                margin: 1vw;
+            }
+    }
+    }
+   
+
 }
-.picflow {
-    margin: 10px;
-    @media (min-width: 1000px){
-        .picflow {
-            margin: 1vw;
-        }
-}
-}
+
